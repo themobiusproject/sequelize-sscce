@@ -36,5 +36,4 @@ module.exports = async function() {
   expect(await Foo.count({where: { uuid: { [Op.startsWith]: "573b77ae" } }})).to.equal(1);
   expect(await Foo.count({where: { uuid: { [Op.endsWith]: "81190b734257" } }})).to.equal(1);
   expect(await Foo.count({where: { uuid: { [Op.substring]: "573b77ae" } }})).to.equal(1);
-  expect(await Foo.count({where: { uuid: { [Op.iLike]: "573B77AE%" } }})).to.equal(1);
 };
